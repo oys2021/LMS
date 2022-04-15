@@ -1,0 +1,439 @@
+{% load static %}
+<div class="header">
+
+    <ul class="user-group">
+      <li><a href="https://s.codepen.io/spicuzza21/debug/GpEmyw">Home</a></li>
+      <li><a href="https://s.codepen.io/spicuzza21/debug/GoJmro">About</a></li>
+      <li><a href="https://s.codepen.io/spicuzza21/debug/jWPBLW">Contact</a></li>
+    </ul>
+  </div>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Courgette);
+    @import url(https://fonts.googleapis.com/css?family=Amaranth);
+    @import url(https://fonts.googleapis.com/css?family=Muli);
+    @import url("https://fonts.googleapis.com/css?family=Cookie");
+    @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+    @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* set body dimension and background */
+    body { 
+      min-width: 960px;
+      max-width: 960px;
+      margin: 5px auto 5px auto;
+      background-color: white; 
+    }
+    
+    /* header is block */
+    .header { 
+      display: block;
+    }
+    
+    /* Add your CSS rules based on the instructions in comments. */
+    
+    /* user-group links and quick-access links share the row */
+    /* TODO - use inline-block and width 55% */
+    .user-group {
+      display: inline-block;
+      width: 55%;
+    }
+    
+    /* TODO - use inline-block and width 40% */
+    .quick-access {
+      display: inline-block;
+      width: 40%;
+      
+      /* quick-access links align to the right */  
+      text-align: right;
+    }
+    
+    /* user group links share the row among themselves */
+    /* TODO - use inline-block */
+    /* TODO - add left and right padding each 5px */
+    /* TODO - add right border as seperation bar with color steelblue */
+    .user-group > li {
+      display: inline-block;
+      padding: 0 5px 0 5px;
+       border: 1px solid steelblue;
+      border-width: 0 1px 0 0;
+    }
+    
+    /* remove last bar */
+    /* TODO - set border width 0 */
+    .user-group > li:last-child {
+      border-width: 0;
+    }
+    
+    /* control the style of link texts */
+    /* TODO - set text color steelblue and font-size 75% */
+    .user-group > li > a {
+      
+      /* set font type */
+      color: darkblue;
+      font-size: 75%;
+      font-family: Muli;
+      /* remove underlie from links */
+      text-decoration: none;
+    }
+    
+    /* quick-access links share the row among themselves */
+    /* TODO - use inline-block */
+    /* TODO - add left and right padding each 5px */
+    /* TODO - add right border as seperation bar with color grey */
+    .quick-access > li {
+      display:inline-block;
+      padding: 0 5px 0 5px;
+      border: 1px solid grey;
+      border-width: 0 1px 0 0;
+    }
+    
+    /* remove last bar */
+    /* TODO - set border width 0 */
+    .quick-access > li:last-child {
+      border-width: 0;
+    }
+    
+    /* control link style */
+    /* TODO - set text color and font-size */  
+    .quick-access > li > * {
+      color: darkblue;
+      font-size: 68%;
+      /* set font type */
+      font-family: Muli;
+      /* remove underlie from links */
+      text-decoration: none;
+    }
+    
+    /* banner is another row itself */
+    /* TODO - set display block and margin 20px top/bottome and 10px left/right */
+    .banner { 
+      display: inline-block;
+      margin: 20px 10px 20px 10px;
+      
+    }
+    
+    /* two links/images inthe banner share the row */
+    /* TODO - use inline block */
+    .banner > a { 
+      display: inline-block
+        
+    }
+    
+    /* TODO - set first logo width 30% and 2nd 66% */
+    .banner > a:nth-child(1)  {
+      width: 30%;
+    }
+    .banner > a:nth-child(2)  { 
+      width: 66%;
+    }
+    
+    /* TODO - set display block for image since it is the only child and does NOT share the row with anyone under its parent. */
+    .banner > a > img {
+      display: inline-block;
+    }
+    .banner>a2{
+      padding: 200px;
+      
+    }
+    .banner>a3{
+      color:green;
+      font-size: 30px;
+      padding:800px;
+      
+    }
+      .quick-access> sli {
+        color: darkgreen;    
+        font-size: 25px;      
+      }
+    
+    /*Navbar */
+    * { padding: 0; margin: 0; }
+    body { background-color: white; }
+    .menu {  
+      /* Use display: block, since it will have the whole row for itself. */
+      display: block;
+      height: auto;
+      background-color: darkgreen;
+      text-align:center;
+    }
+    
+    .menu > li {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 15px;
+    }
+    .menu > li:hover {
+      color: darkblue;
+      background-color: lightgreen;
+    }
+    
+    
+    /* Select the span tag to control the color of the top level menu item. Notice, the text is inside of the span tag. */
+    .menu > li > span {
+      /* Use display: inline; without width and height value since they have no effects on inline element. Inline elements's width and height is controlled by browsers. */
+      display: inline;
+      color: white;
+      font-family:Amaranth;
+     font-size:20px;
+      padding:71px;
+    }
+    
+    .menu > li > a {
+      display: inline;
+      color: white;
+      font-family:Amaranth;
+     font-size:20px;
+      text-decoration:none;
+      padding:71px;
+    }
+    .menu > li:hover > span {
+      color: darkblue;
+    }
+    .menu > li:hover > a {
+      color: darkblue;
+    }
+    
+    /* Select 2nd level menu using path selector */
+    .menu > li > ul {
+    font-family:Amaranth;
+     font-size:18px;
+      display: none;
+    }
+    
+    /* Here is how to do dropdown menu */
+    /* Step 1 - set 1st level menu item position relative, so 2nd level menu position can be relative to it. */
+    .menu > li {
+      position: relative;
+    }
+    
+    /* 2nd level menu */
+    .menu > li:hover > ul {
+      display: block;
+      background-color: lightgreen;
+      color: darkblue;
+      width:241px;
+      z-index:30;
+      
+      /* Step 2 - set 2nd level menu position absolute, so it's position is relative to 1st level menu position, only when 1st level menu position is NOT static (relative or absolute) */
+      position: absolute;
+      
+      /* further use top and left (bottome/right) to control exact position */
+      top: 3em;
+      left: 0;
+    }
+    
+    /* TODO - Align 2nd menu to the right edge of 1st level menu */
+    .menu > li:last-child:hover > ul {
+      left: auto;
+      right: 0;
+      /* TODO - set left to be auto */
+      /* TODO - set right to be 0 to align on right edge */
+    }
+    
+    .menu > li > ul > li {
+      padding: 0.5em;
+    
+      /* remove bullets in front of list items */
+      list-style: none;
+    }
+    
+    .menu > li > ul > li > a {
+      color: darkblue;
+      
+      /* remove underline of links */
+      text-decoration: none;
+      
+      /* prevent link text from wrapping up to multiple lines */
+      white-space: nowrap;
+    }
+    
+    /* words*/
+    h1{
+     color:darkblue;
+     font-size: 40px;
+     text-align:center;
+     line-height: 100px;
+     font-family:Courgette;
+    }
+    .words{
+      font-family:Muli;
+    }
+    .words>h2{
+      color:darkblue;
+      line-height:60px
+    }
+    .words>ul{
+      color:grey;
+     
+    }
+    .words>li{
+      color:grey;
+       line-height:30px;
+    }
+    
+    
+    .fotorama{
+      display: block;
+      width: 600px;
+      margin: 0 auto;
+    }
+    
+    /*footer*/
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    .footer {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: ;
+      background-image: url("http://extensionreforms.dacnet.nic.in/images/9.jpg");
+      background-size: contain;
+      background-position: top center;
+      background-repeat: repeat;  
+    }
+    
+    
+    .footer > span {
+      display: block;
+      color: #dddddd;
+      font-family: sans-serif;
+    }
+    
+    .footer > span > a {
+      color: steelblue;
+      text-decoration: none;
+    }
+    
+    
+    .footer > .name {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 200%;
+      font-family: cookie;
+      color:darkblue;
+    }
+    
+    .footer > .social-media { margin-bottom: 10px; }
+    .footer > .social-media > a {
+      padding: 0 5px;
+      font-size: 38px;
+      color:darkblue;
+    }
+    
+    
+    .footer > .copyright { font-size: 60%; }
+    
+    
+    .footer > .quick-access > a {
+      border-right: 1px solid ;
+      padding: 0 1em;
+      font-size: 60%;
+      
+    }
+    .footer > .quick-access > a:last-child { border: 0; }
+    .footer>ul{
+      color:darkblue;
+    }
+     
+  </style>
+  
+  <!-- nothing to do here -->
+  <div class="banner">
+    <!-- Rutgers logo -->
+    
+    <a href="">
+      <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10100900_426x192.png" alt="" />
+    </a>
+  
+    <a2 href="">
+      <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10206697.png" alt="" />
+    </a2>  
+    
+    <!-- SC&I logo, white iamge on white background that is why it is invisible  -->  
+    <a href="">
+      <img src="" alt="" />
+    </a>
+    <div class = social-media>
+    
+  </div>
+   <!--Navebar -->
+  <ul class="menu">
+  
+    <!-- Top level menu item -->
+    <li>
+      <!-- Top level menu item text -->
+      <a href="https://s.codepen.io/spicuzza21/debug/GpEmyw">Home</a> 
+        <!-- 2nd level menu is another list itself -->
+    </li>
+    <li>
+      <!-- Top level menu item text -->
+      <span>Services</span>
+        <!-- 2nd level menu -->
+        <ul>
+          <li>
+            <a href="https://s.codepen.io/spicuzza21/debug/dGYWVE">Landscaping</a>  
+          </li>
+          <li><a href="https://s.codepen.io/spicuzza21/debug/vLNdwN">Pavers </a></li>
+          <li><a href="https://s.codepen.io/spicuzza21/debug/xZwYmB">Power Washing</a></li>
+          <li><a href="https://s.codepen.io/spicuzza21/debug/xZwdWm">Snow Removal</a></li>
+          <li><a href="https://s.codepen.io/spicuzza21/debug/gPaWdr">Lighting</a></li>
+        </ul>  
+    </li>
+    <li>
+      <a href="https://s.codepen.io/spicuzza21/debug/GoJmro">About</a> 
+    </li>
+    <li>
+      <a href="https://s.codepen.io/spicuzza21/debug/jWPBLW">Contact</a> 
+      </ul>  
+    </li>
+  </ul>
+    
+  <!-- Writing-->
+  <h1>About Us!</h1>
+  <div class = "words">
+    <a href="">
+      <img src="http://fgmlandscaping.com/_imgstore/4/1775944/page_about-us_fD5EVcQ5GgJqM8zD9iGMC/FB_JDYpc0h309S4qz1p-JjMqH-U.png" alt="" />
+    </a>
+  <h2>Create and Maintain a Beautiful Landscape with Our Help.
+  </h2>
+    <li>FGM Landscaping & Brick Pavers, also known as Freehold Grounds Maintenance, has been creating and maintaining fine landscapes for over 30 years. We pride ourselves on having a mix between positive customer relations & a high level of design skill. Owners of FGM Joe Spicuzza and Scott Kuffner, created this company in 1985 in Freehold, New Jersey. Our office is now located in Millstone New Jersey, after a successful start to the company and the need for a bigger workspace. We are determined to work with our customers in order to ensure they achieve the upmost satisfaction at an affordable price. We are ICPI certified, a licensed pesticide applicator business, and fully insured!</li>  
+    </div>
+    
+    <h1>Testimonials</h1>
+    
+    <!--testimonials-->
+  <div class="fotorama" data-autoplay="3000" data-loop="true" data-nav="thumbs" data-width="600px">
+    <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10318548.jpg" />
+    <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10318549.jpg" />
+    <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10318550_720x646.jpg" />
+    <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10318551_714x878.jpg" />
+    <img src="http://fgmlandscaping.com/communities/4/000/001/775/944//images/10318553_682x433.jpg" />
+  </div>
+  
+  <!-- load jQuery JavaScript library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+  <!-- load fotorama plugin JavaScript code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
+    
+      
+    <!-- footer -->
+  
+  <div class="footer">
+    <span class="name">Freehold Grounds Maintenance</span>
+    <ul>Landscaping & Brick Pavers</ul>
+  
+    <span class="social-media">
+      <a href="https://www.facebook.com/FGM-Landscaping-Brick-Pavers-469708016520480/?ref=ts" class="fa fa-facebook-square"></a>
+      <a href="https://twitter.com/fgm_landscaping" class="fa fa-twitter-square"></a>
+    </span>  
+  
+    <span class="copyright">Copyright © 2015	, FGM Landscaping & Brick Pavers.</span>
+  </div>

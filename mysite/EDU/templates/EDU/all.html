@@ -1,0 +1,9 @@
+{%load static %}
+<html>
+   {%for blogs in blog %}
+   <p><a href="/show/{{blogs.id}}">{{ blogs.headline }}</a></p>
+    <p><a href="/add/">{{ blogs.description }}</a></p>
+    <p>{{ blogs.content }}</p>
+    <p>{{ blogs.pk }}</p>
+    {% endfor %}
+</html>

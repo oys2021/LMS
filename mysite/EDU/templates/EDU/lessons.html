@@ -1,0 +1,26 @@
+{% load static %}
+<div class="col">
+
+    <hr>
+
+{#			<a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>#}
+        <table class="table table-sm">
+            <tr>
+                <th></th>
+                <th>Lesson</th>
+                <th>Class</th>
+                <th>link</th>
+            </tr>
+
+            {% for lesson in lessons %}
+            <tr>
+                <td></td>
+                <td>{{ lesson }}</td>
+                <td>{{ lesson.relate_class }}</td>
+                <td>---</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+</div>

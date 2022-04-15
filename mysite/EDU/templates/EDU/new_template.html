@@ -1,0 +1,19 @@
+{%load static %}
+<html>
+   <form method="POST">
+    {%csrf_token%}
+    <label>One</label>
+    <input name="one">
+    <label>two</label>
+    <input name="two">
+    <label>three</label>
+    <input name="three">
+    <input name="submit" type="submit">
+   </form>
+   {%for head in head %}
+   <p>{{ head.headline }}</p>
+    <p>{{ head.description }}</p>
+    <p>{{ head.content }}</p>
+    <p>{{ head.pk }}</p>
+    {% endfor %}
+</html>
